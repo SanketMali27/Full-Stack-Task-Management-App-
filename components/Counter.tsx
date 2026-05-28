@@ -1,19 +1,15 @@
 "use client";
 
-type CounterProps = {
-    count: number;
-    increase: () => void;
-};
+import { useState } from "react";
 
-export default function Counter({
-    count,
-    increase,
-}: CounterProps) {
+export default function Counter() {
+    const [count, setCount] = useState(0);
+
     return (
         <div>
             <h1>Count: {count}</h1>
 
-            <button onClick={increase}>
+            <button onClick={() => setCount((currentCount) => currentCount + 1)}>
                 Increase
             </button>
         </div>
