@@ -13,7 +13,7 @@ export default function CreateBoardForm() {
         await fetch("/api/boards", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ title, userId: "1" }),
+            body: JSON.stringify({ title }),
         });
 
         setTitle("");

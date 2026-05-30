@@ -1,0 +1,85 @@
+(node:5568) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+⨯ Error [PrismaClientKnownRequestError]: 
+Invalid `{imported module ./lib/prisma.ts}["prisma"].user.findMany()` invocation in
+C:\Users\sanke\OneDrive\Desktop\NextJs\Proj-1\my-proj1\.next\dev\server\chunks\[root-of-the-server]__10iw247._.js:89:152
+
+  86 [{imported module ./lib/prisma.ts}] = __turbopack_async_dependencies__.then ? (await __turbopack_async_dependencies__)() : __turbopack_async_dependencies__;
+  87 ;
+  88 async function GET() {
+→ 89     const users = await {imported module ./lib/prisma.ts}["prisma"].user.findMany(
+The column `User.password` does not exist in the current database.
+    at <unknown> (app\api\users\route.ts:4:37)
+    at async GET (app\api\users\route.ts:4:19)
+  2 |
+  3 | export async function GET() {
+> 4 |     const users = await prisma.user.findMany();
+    |                                     ^
+  5 |
+  6 |     return Response.json(users);
+  7 | } {
+  code: 'P2022',
+  meta: {
+    modelName: 'User',
+    driverAdapterError: Error [DriverAdapterError]: ColumnNotFound
+        at PrismaPgAdapter.onError (C:\Users\sanke\OneDrive\Desktop\NextJs\Proj-1\my-proj1\.next\dev\server\chunks\ssr\[root-of-the-server]__0wft918._.js:5846:15)
+        at PrismaPgAdapter.performIO (C:\Users\sanke\OneDrive\Desktop\NextJs\Proj-1\my-proj1\.next\dev\server\chunks\ssr\[root-of-the-server]__0wft918._.js:5841:18)
+        at async PrismaPgAdapter.queryRaw (C:\Users\sanke\OneDrive\Desktop\NextJs\Proj-1\my-proj1\.next\dev\server\chunks\ssr\[root-of-the-server]__0wft918._.js:5777:34)
+        at async GET (app\api\users\route.ts:4:19)
+      2 |
+      3 | export async function GET() {
+    > 4 |     const users = await prisma.user.findMany();
+        |                   ^
+      5 |
+      6 |     return Response.json(users);
+      7 | } {
+      [cause]: [Object]
+    }
+  },
+  clientVersion: '7.8.0'
+}
+⨯ Error [PrismaClientKnownRequestError]: 
+Invalid `{imported module ./lib/prisma.ts}["prisma"].user.findFirst()` invocation in
+C:\Users\sanke\OneDrive\Desktop\NextJs\Proj-1\my-proj1\.next\dev\server\chunks\[root-of-the-server]__07jmwoc._.js:107:143
+
+  104     where: {
+  105         id: requestedUserId
+  106     }
+→ 107 }) : await {imported module ./lib/prisma.ts}["prisma"].user.findFirst(
+The column `User.password` does not exist in the current database.
+    at <unknown> (app\api\boards\route.ts:28:29)
+    at async POST (app\api\boards\route.ts:28:11)
+  26 |     const existingUser = requestedUserId
+  27 |         ? await prisma.user.findUnique({ where: { id: requestedUserId } })
+> 28 |         : await prisma.user.findFirst({ orderBy: { createdAt: "asc" } });
+     |                             ^
+  29 |
+  30 |     const user =
+  31 |         existingUser ?? {
+  code: 'P2022',
+  meta: {
+    modelName: 'User',
+    driverAdapterError: Error [DriverAdapterError]: ColumnNotFound
+        at PrismaPgAdapter.onError (C:\Users\sanke\OneDrive\Desktop\NextJs\Proj-1\my-proj1\.next\dev\server\chunks\ssr\[root-of-the-server]__0wft918._.js:5846:15)
+        at PrismaPgAdapter.performIO (C:\Users\sanke\OneDrive\Desktop\NextJs\Proj-1\my-proj1\.next\dev\server\chunks\ssr\[root-of-the-server]__0wft918._.js:5841:18)
+        at async PrismaPgAdapter.queryRaw (C:\Users\sanke\OneDrive\Desktop\NextJs\Proj-1\my-proj1\.next\dev\server\chunks\ssr\[root-of-the-server]__0wft918._.js:5777:34)
+        at async POST (app\api\boards\route.ts:28:11)
+      26 |     const existingUser = requestedUserId
+      27 |         ? await prisma.user.findUnique({ where: { id: requestedUserId } })
+    > 28 |         : await prisma.user.findFirst({ orderBy: { createdAt: "asc" } });
+         |           ^
+      29 |
+      30 |     const user =
+      31 |         existingUser ?? {
+      [cause]: [Object]
+    }
+  },
+  clientVersion: '7.8.0'
+}

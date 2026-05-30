@@ -1,22 +1,32 @@
 import { prisma } from "@/lib/prisma";
+import { unstable_noStore as noStore } from "next/cache";
 import { notFound } from "next/navigation";
 import CreateTaskForm from "@/components/CreateTaskForm";
 
+export const dynamic = "force-dynamic";
+
 type BoardPageProps = {
-    params: Promise<{ boardId: string }>;
+    params: Promise<{ boardId?: string; boardid?: string }>;
 };
 
 export default async function BoardPage({ params }: BoardPageProps) {
-    const { boardId } = await params;
+    noStore();
 
-    if (!boardId) notFound();
+    const resolvedParams = await params;
+    const boardId = resolvedParams.boardId ?? resolvedParams.boardid;
+
+    if (!boardId) {
+        notFound();
+    }
 
     const board = await prisma.board.findUnique({
         where: { id: boardId },
         include: { tasks: true },
     });
 
-    if (!board) notFound();
+    if (!board) {
+        notFound();
+    }
 
     return (
         <main className="min-h-screen bg-[#0a0a0f] text-white font-['Sora',sans-serif]">

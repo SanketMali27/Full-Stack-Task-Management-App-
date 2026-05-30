@@ -1,8 +1,17 @@
 import Link from "next/link";
+import { unstable_noStore as noStore } from "next/cache";
 import { prisma } from "@/lib/prisma";
 import CreateBoardForm from "@/components/CreateBoardForm";
+import Signup from "@/components/signup";
+import Signin from "@/components/login";
+
+export const dynamic = "force-dynamic";
 
 export default async function Home() {
+  noStore();
+  if (!localStorage.getItem("user")) {
+    window.location.href = "/signin";
+  }
   const boards = await prisma.board.findMany();
 
   return (
@@ -75,6 +84,8 @@ export default async function Home() {
             New Board
           </h2>
           <CreateBoardForm />
+          <Signup />
+          <Signin />
         </div>
       </div>
     </main>

@@ -1,0 +1,84 @@
+
+> my-proj1@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://10.163.129.190:3000
+- Environments: .env
+✓ Ready in 535ms
+Creating turbopack project {
+  dir: 'C:\\Users\\sanke\\OneDrive\\Desktop\\NextJs\\Proj-1\\my-proj1',
+  testMode: true
+}
+
+ GET /boards/cmppfs5ie000114mdov447v7l 404 in 6.9s (next.js: 2.4s, application-code: 4.6s)
+BoardPage params: { boardId: 'cmppfs5ie000114mdov447v7l' } resolved boardId: cmppfs5ie000114mdov447v7l
+BoardPage params: { boardId: 'cmppfs5ie000114mdov447v7l' } resolved boardId: cmppfs5ie000114mdov447v7l
+BoardPage notFound: board not found for id cmppfs5ie000114mdov447v7l
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 6.0s (next.js: 3ms, application-code: 6.0s)
+BoardPage notFound: board not found for id cmppfs5ie000114mdov447v7l
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 8.8s (next.js: 54ms, application-code: 8.8s)
+BoardPage params: { boardId: 'cmppfs5ie000114mdov447v7l' } resolved boardId: cmppfs5ie000114mdov447v7l
+BoardPage notFound: board not found for id cmppfs5ie000114mdov447v7l
+ GET /boards/cmppfs5ie000114mdov447v7l 404 in 376ms (next.js: 11ms, application-code: 365ms)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 6.9s (next.js: 75ms, application-code: 6.9s)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 6.7s (next.js: 5ms, application-code: 6.7s)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 6.8s (next.js: 4ms, application-code: 6.8s)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 7.2s (next.js: 42ms, application-code: 7.1s)
+ GET /boards/cmppfs5ie000114mdov447v7l 404 in 681ms (next.js: 13ms, application-code: 668ms)
+ GET /api/boards 200 in 3.8s (next.js: 226ms, application-code: 3.6s)
+ GET /api/boards 200 in 4.3s (next.js: 3ms, application-code: 4.3s)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 2.5s (next.js: 62ms, application-code: 2.4s)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 518ms (next.js: 15ms, application-code: 503ms)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 301ms (next.js: 3ms, application-code: 298ms)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 3.2s (next.js: 49ms, application-code: 3.2s)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 3.3s (next.js: 27ms, application-code: 3.2s)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 301ms (next.js: 14ms, application-code: 287ms)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 296ms (next.js: 3ms, application-code: 293ms)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 301ms (next.js: 3ms, application-code: 298ms)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 3.6s (next.js: 3ms, application-code: 3.6s)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 346ms (next.js: 3ms, application-code: 343ms)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 3.8s (next.js: 4ms, application-code: 3.8s)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 3.9s (next.js: 72ms, application-code: 3.8s)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 338ms (next.js: 3ms, application-code: 336ms)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 328ms (next.js: 6ms, application-code: 322ms)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 391ms (next.js: 31ms, application-code: 359ms)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 326ms (next.js: 15ms, application-code: 310ms)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 323ms (next.js: 7ms, application-code: 316ms)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 310ms (next.js: 4ms, application-code: 307ms)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 347ms (next.js: 29ms, application-code: 318ms)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 293ms (next.js: 3ms, application-code: 290ms)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 324ms (next.js: 3ms, application-code: 321ms)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 429ms (next.js: 3ms, application-code: 426ms)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 352ms (next.js: 3ms, application-code: 349ms)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 316ms (next.js: 3ms, application-code: 312ms)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 390ms (next.js: 3ms, application-code: 387ms)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 483ms (next.js: 8ms, application-code: 475ms)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 1022ms (next.js: 3ms, application-code: 1019ms)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 1158ms (next.js: 24ms, application-code: 1134ms)
+ GET / 200 in 985ms (next.js: 477ms, application-code: 508ms)
+ GET /api/users 500 in 3.8s (next.js: 121ms, application-code: 3.7s)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 5.8s (next.js: 93ms, application-code: 5.7s)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 2.8s (next.js: 94ms, application-code: 2.8s)
+✓ Compiled in 138ms
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 446ms (next.js: 118ms, application-code: 328ms)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 1217ms (next.js: 4ms, application-code: 1214ms)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 3.3s (next.js: 37ms, application-code: 3.3s)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 3.3s (next.js: 4ms, application-code: 3.3s)
+ POST /api/boards 500 in 542ms (next.js: 33ms, application-code: 509ms)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 6.1s (next.js: 33ms, application-code: 6.1s)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 6.2s (next.js: 3ms, application-code: 6.2s)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 6.5s (next.js: 80ms, application-code: 6.4s)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 6.3s (next.js: 5ms, application-code: 6.3s)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 415ms (next.js: 81ms, application-code: 334ms)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 323ms (next.js: 3ms, application-code: 320ms)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 561ms (next.js: 40ms, application-code: 521ms)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 563ms (next.js: 83ms, application-code: 481ms)
+ GET /api/users 200 in 1980ms (next.js: 85ms, application-code: 1894ms)
+ POST /api/boards 200 in 3.6s (next.js: 53ms, application-code: 3.5s)
+ GET /boards/cmpqu4kij0001aomdi8agzklz 200 in 607ms (next.js: 17ms, application-code: 590ms)
+ GET / 200 in 572ms (next.js: 119ms, application-code: 453ms)
+ GET /boards/cmppfs5ie000114mdov447v7l 404 in 6.4s (next.js: 3.1s, application-code: 3.3s)
+ GET /boards/cmppfs5ie000114mdov447v7l 200 in 1403ms (next.js: 24ms, application-code: 1378ms)
+[?25h
