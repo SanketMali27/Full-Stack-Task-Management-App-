@@ -2,17 +2,27 @@ import Link from "next/link";
 import { unstable_noStore as noStore } from "next/cache";
 import { prisma } from "@/lib/prisma";
 import CreateBoardForm from "@/components/CreateBoardForm";
-import Signup from "@/components/signup";
-import Signin from "@/components/login";
+
+import { authOptions } from "@/lib/auth";
+import { getServerSession } from "next-auth";
+import { redirect } from "next/navigation";
 
 export const dynamic = "force-dynamic";
 
 export default async function Home() {
   noStore();
-  if (!localStorage.getItem("user")) {
-    window.location.href = "/signin";
+  const session = await getServerSession(
+    authOptions
+  );
+  if (!session) {
+    redirect("/signin");
   }
-  const boards = await prisma.board.findMany();
+  const boards = await prisma.board.findMany({
+    where: {
+      userId: session.user.id,
+    },
+  });
+
 
   return (
     <main className="min-h-screen bg-[#0a0a0f] text-white font-['Sora',sans-serif]">
@@ -84,8 +94,7 @@ export default async function Home() {
             New Board
           </h2>
           <CreateBoardForm />
-          <Signup />
-          <Signin />
+
         </div>
       </div>
     </main>

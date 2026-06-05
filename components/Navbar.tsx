@@ -1,3 +1,5 @@
+import LogoutButton from "./LogoutButton";
+
 type NavbarProps = {
     title: string;
 };
@@ -8,6 +10,7 @@ export default function Navbar({
     return (
         <nav>
             <h1>{title}</h1>
+            <LogoutButton />
         </nav>
     );
 }
