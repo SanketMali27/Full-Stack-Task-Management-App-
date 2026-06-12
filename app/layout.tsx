@@ -13,15 +13,18 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html
       lang="en"
       className="h-full antialiased"
     >
-      <body className="min-h-full flex flex-col mt-4">
-        <Navbar title="Task Manager App" />
+      <body className="min-h-full flex flex-col ">
+
 
         <AuthProvider>
+          <Navbar />
+
           {children}
         </AuthProvider>
       </body>

@@ -27,19 +27,6 @@ export default async function Home() {
   return (
     <main className="min-h-screen bg-[#0a0a0f] text-white font-['Sora',sans-serif]">
       {/* Header */}
-      <div className="border-b border-white/10 px-8 py-5 flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-violet-500 to-indigo-600 flex items-center justify-center text-xs font-bold shadow-lg shadow-violet-500/30">
-            B
-          </div>
-          <span className="text-sm font-semibold tracking-wide text-white/80">
-            BoardSpace
-          </span>
-        </div>
-        <span className="text-xs text-white/30 tabular-nums">
-          {boards.length} board{boards.length !== 1 ? "s" : ""}
-        </span>
-      </div>
 
       <div className="max-w-4xl mx-auto px-8 py-14">
         {/* Hero heading */}
